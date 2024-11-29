@@ -50,3 +50,45 @@ button {
 button:hover {
     background-color: #2a3696;
 }
+
+
+
+.pokemon-card h2 {
+    font-size: 1.5rem;
+    color: #3b4cca;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+}
+
+/* Pokémon Details */
+.pokemon-card p {
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+.pokemon-card .type {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #ffcb05;
+    border-radius: 5px;
+    color: #333;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Individual Pokémon Card */
+.pokemon-card {
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 200px;
+}
+
+.pokemon-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}

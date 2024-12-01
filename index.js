@@ -28,14 +28,18 @@ fetch(API_URL)
                 const pokemonDiv = document.getElementById('pokemon');
                 pokemonDiv.innerHTML = `
                     <h2>${data.name.toUpperCase()}</h2>
-                    <p><strong>Weight:</strong> ${data.weight}</p>
+                    <p><strong>Weight:</strong> ${data.weight} lbs</p>
                     <p><strong>Type:</strong> ${data.types.map(t => t.type.name).join(', ')}</p>
-                    <img src="${data.sprites.front_default}" alt="${data.name}">
-                `;
+                    <img src="${data.sprites.front_default}" alt="${data.name}">`;
+                    document.getElementById('pokemon-card').style.display = 'block';
+                    
             })
             .catch(error => {
+                document.getElementById('pokemon-card').style.display = 'block';
                 const pokemonDiv = document.getElementById('pokemon');
                 pokemonDiv.innerHTML = `<p>${error.message}</p>`;
+               
+
             });
         }
 

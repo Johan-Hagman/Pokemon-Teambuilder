@@ -4,22 +4,19 @@
     box-sizing: border-box;
 }
 
-
 body {
     font-family: 'Arial', sans-serif;
-    /* background-color: #f4f4f4; */
+    background-color: #f4f4f4;
     color: #333;
     line-height: 1.6;
     padding: 20px;
-    background-image: url('/pokemon-background.jpg');
-    background-size: cover; /* Täck hela sidan */
-    background-repeat: no-repeat; /* Ingen upprepning */
-    background-position: center; /* Centrerad bild */
-    
+background: url(/May-pokemon.webp);
 }
 
 /* Header Styling */
 header {
+   display: flex;
+   justify-content: center;
     text-align: center;
     margin-bottom: 20px;
 }
@@ -57,40 +54,15 @@ button:hover {
     background-color: #2a3696;
 }
 
-section {
+.pokedex {
     display: flex;
-    align-items: center;
     justify-content: center;
-    flex-direction: column;
+    align-items: center;
+   
 }
 
-
-#pokemon-card h2 {
-    font-size: 1.5rem;
-    color: #3b4cca;
-    margin-bottom: 10px;
-    text-transform: capitalize;
-}
-
-/* Pokémon Details */
-#pokemon-card p {
-    font-size: 1rem;
-    margin: 5px 0;
-}
-
-#pokemon-card .type {
-    display: inline-block;
-    padding: 5px 10px;
-    background-color: #ffcb05;
-    border-radius: 5px;
-    color: #333;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-/* Individual Pokémon Card */
-#pokemon-card {
- display:none;
+.pokemon-card {
+  
     background-color: #fff;
     border: 2px solid #ccc;
     border-radius: 10px;
@@ -98,10 +70,23 @@ section {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    max-width: 200px;
 }
 
-#pokemon-card:hover {
+.pokemon-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
+
+.pokemon-card h2 {
+    font-size: 1.5rem;
+    color: #3b4cca;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+}
+
+/* Pokémon Details */
+.pokemon-card p {
+    font-size: 1rem;
+    margin: 5px 0;
+}
+

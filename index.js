@@ -1,4 +1,4 @@
-const API_URL = 'https://pokeapi.co/api/v2/pokemon?limit=151'; // Hämtar säsong 1
+const API_URL = 'https://pokeapi.co/api/v2/pokemon?limit=386'; // Hämtar säsong 1-3
 
 fetch(API_URL)
     .then(response => response.json())
@@ -28,20 +28,66 @@ fetch(API_URL)
                 const pokemonDiv = document.getElementById('pokemon');
                 pokemonDiv.innerHTML = `
                     <h2>${data.name.toUpperCase()}</h2>
-                    <p><strong>Weight:</strong> ${data.weight} lbs</p>
+                    <p><strong>Weight:</strong> ${data.weight}lbs</p>
                     <p><strong>Type:</strong> ${data.types.map(t => t.type.name).join(', ')}</p>
-                    <img src="${data.sprites.front_default}" alt="${data.name}">`;
-                    document.getElementById('pokemon-card').style.display = 'block';
-                    
+                    <img src="${data.sprites.front_default}" alt="${data.name}">
+                `;
+                fetch(data.species.url)
+                .then(response => response.json())
+                .then(speciesData => {
+                    const evolutionChainUrl = speciesData.evolution_chain.url;
+
+                    // Hämta evolution chain
+                    fetch(evolutionChainUrl)
+                        .then(response => response.json())
+                        .then(evolutionData => {
+                            const evolutions = getEvolutions(evolutionData.chain);
+                            const evolutionHtml = `<p><strong>Evolution Chain:</strong> ${evolutions.join(' ➡️ ')}</p>`;
+                            pokemonDiv.innerHTML += evolutionHtml;
+                        });
+                });
             })
             .catch(error => {
-                document.getElementById('pokemon-card').style.display = 'block';
                 const pokemonDiv = document.getElementById('pokemon');
                 pokemonDiv.innerHTML = `<p>${error.message}</p>`;
-               
-
             });
         }
+
+        function getEvolutions(chain) {
+            const evolutions = [];
+            let current = chain;
+            while (current) {
+                evolutions.push(current.species.name.toUpperCase());
+                current = current.evolves_to[0]; // Gå till nästa evolution
+            }
+        if (evolutions.length === 1) {
+return ["Null"];
+        }
+            return evolutions;
+        }
+
+
+        const pokemonListDiv = document.getElementById('pokemonList');
+
+// Funktion för att hämta Pokémon baserat på en URL
+function fetchPokemon(API_URL) {
+    fetch(API_URL)
+        .then(response => response.json())
+        .then(data => {
+            pokemonListDiv.innerHTML = ''; // Töm listan först
+            data.results.forEach(pokemon => {
+                const pokemonItem = document.createElement('p');
+                pokemonItem.textContent = pokemon.name;
+                pokemonListDiv.appendChild(pokemonItem);
+            });
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            pokemonListDiv.innerHTML = `<p>Could not fetch Pokémon: ${error.message}</p>`;
+        });
+}
+
+
 
 
 

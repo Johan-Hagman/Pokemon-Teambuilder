@@ -10,6 +10,7 @@
     --background-color: rgba(255, 255, 255, 0.9); /* Transparent vit */
     --text-color: #333; /* Textfärg */
     --shadow-color: rgba(0, 0, 0, 0.2); /* Standard skuggfärg */
+    --pokedex-red: #ff1a1a; /* Klassisk Pokedex-röd */
 }
 
 html {
@@ -87,6 +88,8 @@ input#search {
     text-align: center;
 }
 
+
+
 /* Search Button Styling */
 .pokedex button {
     padding: 1.5rem 2.5rem;
@@ -124,18 +127,17 @@ button:hover {
 
 .pokemon-card {
     background-color: var(--background-color);
-    border: 0.3rem solid var(--secondary-color);
     border-radius: 1.5rem;
-    padding: 2.5rem;
-    box-shadow: 0.6rem 1rem var(--shadow-color);
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     width: 30rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .pokemon-card:hover {
     transform: translateY(-0.5rem);
-    box-shadow: 0.6rem 1rem var(--shadow-color);
+   
 }
 
 .pokemon-card h2 {

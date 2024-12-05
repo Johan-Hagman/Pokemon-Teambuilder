@@ -61,7 +61,7 @@ fetch(API_URL)
                 current = current.evolves_to[0]; // Gå till nästa evolution
             }
         if (evolutions.length === 1) {
-return ["Null"];
+return ["This pokemon does not evolve!"];
         }
             return evolutions;
         }

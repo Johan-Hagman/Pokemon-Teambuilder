@@ -48,8 +48,35 @@ h1 {
     font-family: 'Pokemon', sans-serif;
 }
 
+h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
 p {
-    color: white;
+    color:var(--text-color);
+    font-size: medium;
+}
+
+button {
+    background-color: #2a3696;
+    transform: scale(1.1); 
+    padding: 1.5rem 2.5rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: 0.3rem solid var(--secondary-color);
+    border-radius: 2.5rem;
+    cursor: pointer;
+    margin-left: 1rem;
+    transition: all 0.3s ease;
+}
+
+
+
+.navbar {
+background-color: var(--pokedex-red);
 }
 
 header input[type="text"] {
@@ -84,72 +111,13 @@ input#search {
     border: 0.3rem solid var(--primary-color);
     border-radius: 2.5rem;
     background: linear-gradient(145deg, var(--background-color),rgba(240, 240, 240, 0.9));
-    color: var(--primary-color);
+    color: var(--text-color);
     text-align: center;
 }
 
 
 
-/* Search Button Styling */
-.pokedex button {
-    padding: 1.5rem 2.5rem;
-    font-size: 1.6rem;
-    font-weight: bold;
-    background-color: var(--primary-color);
-    color: #fff;
-    border: 0.3rem solid var(--secondary-color);
-    border-radius: 2.5rem;
-    cursor: pointer;
-    margin-left: 1rem;
-    transition: all 0.3s ease;
-}
 
-button:hover {
-    background-color: #2a3696;
-    transform: scale(1.1); 
 
-}
 
-.pokedex {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 3rem;
-    margin-top: 3rem;
-}
 
-.stats {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 2rem;
-}
-
-.pokemon-card {
-    background-color: var(--background-color);
-    border-radius: 1.5rem;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 30rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-}
-
-.pokemon-card:hover {
-    transform: translateY(-0.5rem);
-   
-}
-
-.pokemon-card h2 {
-    font-size: 2rem;
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-    text-transform: capitalize;
-}
-
-.pokemon-card p {
-    font-size: 1.4rem;
-    margin: 0.5rem 0;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-}

@@ -1,0 +1,20 @@
+#team {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.team-pokemon {
+    text-align: center;
+    border: 0.1rem solid #ccc;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    width: 15rem;
+}
+
+.team-pokemon img {
+    width: 10rem;
+    height: 10rem;
+}

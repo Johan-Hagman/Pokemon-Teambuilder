@@ -44,6 +44,10 @@
     transition: all 0.3s ease;
 }
 
+.random-container button {
+    border-radius: 0;
+}
+
 .search-container button:hover,
 .random-container button:hover {
     transform: scale(1.1);

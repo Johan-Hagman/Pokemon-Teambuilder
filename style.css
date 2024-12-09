@@ -26,10 +26,6 @@ body {
     background: url(/May-pokemon.webp);
 }
 
-@font-face {
-    font-family: 'Pokemon';
-    src: url('pokemon.ttf') format('truetype');
-}
 
 /* Header Styling */
 header {
@@ -45,7 +41,8 @@ h1 {
     color: var(--secondary-color);
     text-shadow: 0.2rem 0.2rem 0 var(--primary-color);
     margin-bottom: 2rem;
-    font-family: 'Pokemon', sans-serif;
+    font-family: 'Pokemon Solid', sans-serif;
+                                                
 }
 
 h2 {
@@ -69,7 +66,7 @@ button {
     border: 0.3rem solid var(--secondary-color);
     border-radius: 2.5rem;
     cursor: pointer;
-    margin-left: 1rem;
+    /* margin-left: 1rem; */
     transition: all 0.3s ease;
 }
 

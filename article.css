@@ -1,5 +1,9 @@
 .introduction {
 display: flex;
 justify-content: center;
-    background-color:var(--background-color);
+   
+}
+
+#random-suggestions {
+    background-color: var(--background-color);
 }

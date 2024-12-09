@@ -10,47 +10,50 @@
 
     <title>Document</title>
 </head>
-<body>
-  
+ <body>
     <header>
-      <nav class="navbar"> 
-        <h1>Pokédex</h1>
-    </nav>
-       
-</header>
-  
-<article class="introduction">
-   <p>Welcome to the official pokemon teambuilder. 
-    Search your favourite pokemons and add them to your team! If you're new to Pokemon 
-feel free to use the random generator button for some pokemon names.</p>
-    <div id="random-suggestions">
-        <h2>Slumpmässiga förslag</h2>
-        <button id="generateRandom">Generera 6 Pokémon</button>
-        <ol id="suggestionList"></ol>
-    </div>
-</article>
+        <nav class="navbar">
+            <h1>Pokédex</h1>
+        </nav>
+    </header>
 
-<main class="container">
-    
-<section class="pokedex">
-    <input type="text" id="search" placeholder="Enter Pokémon name" />
-    <button onclick="searchPokemon()">Search</button>
-    </div>
-   </section>
-   
-   <section class="stats">
-   <div class="pokemon-card">
-    <div id="pokemon"></div>
-   </section>
+    <article class="introduction">
+        <p>
+            Welcome to the official Pokémon Teambuilder. 
+            Search your favorite Pokémon and add them to your team! 
+            If you're new to Pokémon, feel free to use the random generator button for some Pokémon names.
+        </p>
+    </article>
 
-   <section class="pokemonTeam">
-<div id="pokemon"></div>
-<button id="addToTeam">Add To Team</button>
-<h2>Your Team:</h2>
-<div id="team"></div>
-   </section>
+    <main class="container">
+        <!-- Sök och slump-knapp i samma höjd -->
+        <section class="search-and-random">
+            <div class="search-container">
+                <input type="text" id="search" placeholder="Enter Pokémon name" />
+                <button onclick="searchPokemon()">Search</button>
+            </div>
+            <div class="random-container">
+                <h2>Slumpmässiga förslag</h2>
+                <button id="generateRandom">Generera 6 Pokémon</button>
+                <!-- <div id="pokemonList"></div> -->
+                <ol id="suggestionList"></ol>
+            </div>
+        </section>
 
-</main>
+        <!-- Pokémon Detaljer -->
+        <section class="stats">
+            <div class="pokemon-card">
+                <div id="pokemon"></div>
+            </div>
+        </section>
+
+        <!-- Pokémon Team längst ner -->
+        <section class="pokemon-team">
+            <button id="addToTeam">Add To Team</button>
+            <h2>Your Team:</h2>
+            <div id="team"></div>
+        </section>
+    </main>
 
     <script src="index.js"></script>
 </body>

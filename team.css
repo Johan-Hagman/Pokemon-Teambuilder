@@ -1,20 +1,19 @@
-#team {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
+
+.pokemon-team {
+    text-align: center;
+    margin-top: auto; /* Placera längst ner */
+    padding-top: 3rem;
+}
+
+.pokemon-team h2 {
     margin-top: 2rem;
 }
 
-.team-pokemon {
-    text-align: center;
-    border: 0.1rem solid #ccc;
-    border-radius: 0.5rem;
-    padding: 1rem;
-    background-color: #f9f9f9;
-    width: 15rem;
-}
-
-.team-pokemon img {
-    width: 10rem;
-    height: 10rem;
+.pokemon-team #team {
+    display: flex; /* Rad av lag */
+    gap: 1rem;
+    flex-wrap: wrap; /* Tillåt radbrytning */
+    justify-content: center; /* Centrera laget */
+    margin-top: 1rem;
+    background-color: var(--background-color);
 }

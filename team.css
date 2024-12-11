@@ -1,22 +1,53 @@
-
 .pokemon-team {
+    margin-top: 20px;
+}
+
+#team {
+    background: linear-gradient(to bottom, #3b4cca, #ffcb05); /* Pokémon blå till gul gradient */
+    border: 3px solid #3b4cca; /* Blå ram */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Lätt skugga */
+    color: white;
+    padding: 20px;
     text-align: center;
-    margin-top: auto; /* Placera längst ner */
-    padding-top: 3rem;
-    border: 1rem black;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    min-height: 150px; /* Fixera höjden */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
-.pokemon-team h2 {
-    margin-top: 2rem;
+.team-pokemon {
+    background: rgba(255, 255, 255, 0.8); /* Lätt genomskinlig vit bakgrund */
+    border-radius: 8px;
+    padding: 10px;
+    color: #3b4cca; /* Pokémon-blå text */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 120px;
+    font-weight: bold;
+    transition: transform 0.2s ease, background-color 0.3s ease;
 }
 
-.pokemon-team #team {
-    display: flex; /* Rad av lag */
-    gap: 1rem;
-    flex-wrap: wrap; /* Tillåt radbrytning */
-    justify-content: center; /* Centrera laget */
-    margin-top: 1rem;
-    background-color: var(--background-color);
-   
+.team-pokemon:hover {
+    transform: scale(1.05); /* Liten förstoring vid hover */
+    background-color: #ffcb05; /* Pokémon gul vid hover */
+}
 
+/* Knapp för "Remove" */
+.team-pokemon button {
+    background-color: #ffcb05;
+    color: #3b4cca;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.team-pokemon button:hover {
+    background-color: #3b4cca;
+    color: #ffcb05;
 }

@@ -1,12 +1,3 @@
-/*navbar */
-.navbar {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
- padding: 2rem;
-}
-
 /* General Container */
 .container {
     max-width: 120rem;

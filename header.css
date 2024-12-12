@@ -1,0 +1,22 @@
+/*navbar */
+.navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+ padding: 2rem;
+}
+
+.introduction-container {
+    display: flex;
+justify-content: center;
+}
+
+
+.introduction {
+    background-color: white;
+border-radius: 1.5rem;
+padding: 1rem;
+margin: 1rem;
+max-width: 37rem;
+}

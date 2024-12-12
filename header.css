@@ -9,14 +9,16 @@
 
 .introduction-container {
     display: flex;
-justify-content: center;
+    justify-content: center;
+    padding: 1rem;
 }
-
 
 .introduction {
     background-color: white;
-border-radius: 1.5rem;
-padding: 1rem;
-margin: 1rem;
-max-width: 37rem;
+    border-radius: 1.5rem;
+    padding: 1rem;
+    margin: 1rem;
+    max-width:60rem;
 }
+
+

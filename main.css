@@ -10,7 +10,7 @@
     display: none; /* Default: Hidden */
 }
 
-@media (min-width: 700px) {
+@media (min-width: 70rem) {
     .random-container {
         display: block; /* Visible for screens 700px and larger */
     }

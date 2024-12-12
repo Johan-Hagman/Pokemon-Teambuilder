@@ -1,3 +1,4 @@
+/* Global Settings */
 * {
     margin: 0;
     padding: 0;
@@ -13,6 +14,7 @@
     --pokedex-red: #ff1a1a; /* Klassisk Pokedex-röd */
 }
 
+/* Base Settings */
 html {
     font-size: 62.5%; /* 1rem = 10px */
 }
@@ -22,60 +24,50 @@ body {
     background-color: #f4f4f4;
     color: var(--text-color);
     line-height: 1.6;
-
     background: url(/May-pokemon.webp);
 }
 
 
-/* Header Styling */
-header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    margin-bottom: 4rem;
-}
-
 h1 {
+    font-family: 'Press Start 2P', sans-serif;
+    color: #ffcb05;
+    text-shadow: 2px 2px 0 #3b4cca;
     font-size: 5rem;
-    color: var(--secondary-color);
-    text-shadow: 0.2rem 0.2rem 0 var(--primary-color);
     margin-bottom: 2rem;
-    font-family: 'Pokemon Solid', sans-serif;
-                                                
 }
 
-h2 {
+ h2 {
     font-size: 2rem;
-    color: var(--primary-color);
+    color: #ffcb05;
+    text-shadow: 2px 2px 0 #3b4cca;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+h3 {
+    color: var(--text-color);
 }
 
 p {
-    color:var(--text-color);
+    color: var(--text-color);
     font-size: medium;
 }
 
+/* Button Styling */
 button {
-    background-color: #2a3696;
-    transform: scale(1.1); 
+    background-color: var(--primary-color);
     padding: 1.5rem 2.5rem;
     font-size: 1.6rem;
     font-weight: bold;
-    background-color: var(--primary-color);
     color: #fff;
     border: 0.3rem solid var(--secondary-color);
     border-radius: 2.5rem;
     cursor: pointer;
-    /* margin-left: 1rem; */
+    transform: scale(1.1);
     transition: all 0.3s ease;
 }
 
-
-
-.navbar {
-background-color: var(--pokedex-red);
-}
-
+/* Input Fields */
 header input[type="text"] {
     border-color: var(--primary-color); 
     box-shadow: 0.6rem 1.2rem var(--shadow-color);
@@ -101,16 +93,24 @@ input[type="text"]::placeholder {
     font-size: 1.4rem;
 }
 
+/* Search Input */
 input#search {
-    width: 40rem;
+    width: 30rem;
     padding: 1.5rem;
     font-size: 1.5rem;
     border: 0.3rem solid var(--primary-color);
     border-radius: 2.5rem;
-    background: linear-gradient(145deg, var(--background-color),rgba(240, 240, 240, 0.9));
+    background: linear-gradient(145deg, var(--background-color), rgba(240, 240, 240, 0.9));
     color: var(--text-color);
     text-align: center;
 }
+
+@media (min-width: 70rem) {
+    input#search {
+        width: 40rem;
+    }
+}
+
 
 
 

@@ -43,7 +43,7 @@ async function searchPokemon() {
 function displayPokemonDetails(data) {
     currentPokemon = data;
     pokemonDiv.innerHTML = `
-        <h2>${data.name.toUpperCase()}</h2>
+        <h3>${data.name.toUpperCase()}</h3>
         <p><strong>Weight:</strong> ${data.weight}lbs</p>
         <p><strong>Type:</strong> ${data.types.map(t => t.type.name).join(', ')}</p>
         <img src="${data.sprites.front_default}" alt="${data.name}">

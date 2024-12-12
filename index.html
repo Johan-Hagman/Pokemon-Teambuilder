@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style.css">
-    <link rel="stylesheet" href="/pokedex.css">
+    <link rel="stylesheet" href="/main.css">
     <link rel="stylesheet" href="/team.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <title>Pokédex</title>
 </head>
 <body>
     <header>
-        <!-- <nav class="navbar">
-            <h1>Pokédex</h1>
-        </nav> -->
+        <nav class="navbar">
+            <h1>Pokémon</h1>
+        </nav>
     </header>
     <main class="container">
         <!-- Sök och slump-knapp -->
@@ -22,8 +23,8 @@
                 <button onclick="searchPokemon()">Search</button>
             </div>
             <div class="random-container">
-                <h2>Slumpmässiga förslag</h2>
-                <button id="generateRandom">Generera 6 Pokémon</button>
+                <h2>Don't know any pokemons?</h2>
+                <button id="generateRandom">Generate 6 Pokémon</button>
                 <ol id="suggestionList"></ol>
             </div>
         </section>

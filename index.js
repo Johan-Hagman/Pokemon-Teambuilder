@@ -77,10 +77,10 @@ function displayEvolutionChain(evolutions) {
 
 // Funktion: Lägg till Pokémon i laget
 function addToTeam() {
-    if (!currentPokemon) return alert("Välj en Pokémon först!");
-    if (team.length >= 6) return alert("Du kan bara ha 6 Pokémon i ditt lag!");
+    if (!currentPokemon) return alert("Choose a pokemon first!");
+    if (team.length >= 6) return alert("You can only have up to 6 pokemons!");
     if (team.some(p => p.name === currentPokemon.name)) {
-        return alert(`${currentPokemon.name.toUpperCase()} är redan i ditt lag!`);
+        return alert(`${currentPokemon.name.toUpperCase()} is already in your team!`);
     }
 
     team.push(currentPokemon);

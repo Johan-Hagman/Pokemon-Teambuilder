@@ -48,7 +48,7 @@
     background: linear-gradient(to bottom, var(--secondary-color), var(--primary-color));
     border-radius: 1rem;
     box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.2);
-    color: white;
+    color: var(--background-color);
     font-size: 1.6rem;
     text-align: center;
 }
@@ -56,9 +56,9 @@
 #suggestionList li {
     padding: 0.8rem 1.2rem;
     margin: 0.5rem 0;
-    background: rgba(255, 255, 255, 0.8); 
+    background: var(--background-color); 
     border-radius: 0.8rem;
-    color: #3b4cca; 
+    color: var(--primary-color); 
     font-weight: bold;
     text-transform: uppercase;
     cursor: pointer;
@@ -66,7 +66,7 @@
 }
 
 #suggestionList li:hover {
-    background-color: #ffcb05; 
+    background-color: var(--secondary-color); 
     transform: scale(1.05);
 }
 
@@ -89,10 +89,10 @@
 /* Pokémon Information */
 #pokemon {
     background: linear-gradient(to bottom, var(--secondary-color), var(--primary-color));
-    border: 0.3rem solid #ffcb05; 
+    border: 0.3rem solid var(--secondary-color); 
     border-radius: 1rem;
     box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.2); 
-    color: white;
+    color: var(-background-color);
     padding: 2rem;
     text-align: center;
     font-size: 1.6rem;

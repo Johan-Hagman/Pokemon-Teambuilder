@@ -4,8 +4,8 @@
 }
 
 #team {
-    background: linear-gradient(to bottom, #3b4cca, #ffcb05); 
-    border: 0.3rem solid #3b4cca; 
+    background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
+    border: 0.3rem solid var(--primary-color); 
     border-radius: 1rem;
     box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.2); 
     color: white;
@@ -23,7 +23,7 @@
     background: rgba(255, 255, 255, 0.8); /* Lätt genomskinlig vit bakgrund */
     border-radius: 8px;
     padding: 10px;
-    color: #3b4cca; /* Pokémon-blå text */
+    color: var(--primary-color);
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Lätt skugga */
     width: 120px; /* Bredd på Pokémon-korten */
@@ -33,13 +33,13 @@
 
 .team-pokemon:hover {
     transform: scale(1.05); /* Liten förstoring vid hover */
-    background-color: #ffcb05; /* Pokémon gul vid hover */
+    background-color: var(--secondary-color); /* Pokémon gul vid hover */
 }
 
 /* Remove-knapp Styling */
 .team-pokemon button {
-    background-color: #ffcb05;
-    color: #3b4cca;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
     border: none;
     border-radius: 5px;
     padding: 5px 10px;
@@ -49,6 +49,6 @@
 }
 
 .team-pokemon button:hover {
-    background-color: #3b4cca;
-    color: #ffcb05;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
 }

@@ -34,7 +34,6 @@ function displayPokemonList(pokemonList) {
 async function searchPokemon() {
     const name = document.getElementById('search').value.toLowerCase();
     if (!name) return;
-
     const data = await fetchData(`https://pokeapi.co/api/v2/pokemon/${name}`);
     if (data) displayPokemonDetails(data);
 }
